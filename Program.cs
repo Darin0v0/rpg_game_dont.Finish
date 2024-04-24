@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -902,178 +902,219 @@ Telepatia = 0, SztukaWalkiBroniaBiala = 0, yingYang = 0, poetyckosc = 0;
             Console.WriteLine("Wybierz Rase Kazda rasa da ci jakieś bufy i debufy max +5 -10");
             int InputRasy = int.Parse(Console.ReadLine());
             #region //rasy
+            string klasa = "";
             switch (InputRasy)
             {
                 case 1://Krasnolud 
                     Siła -= 1;
                     pancerz += 20;
+                    klasa = "Krasnal";
                     break;
                 case 2://Elf 
                     Zręczność += 5;
                     pancerz -= 10;
+                    klasa = "Elf";
                     break;
                 case 3://Mroczny elf 
                     Wiedza += 5;
                     zdrowie += 10;
+                    klasa = "Mroczny Elf";
                     break;
                 case 4://Wysoki elf
                     WrodzonaWiedza += 5;
                     zdrowie -= 10;
+                    klasa = "Wysoli Elf";
                     break;
                 case 5://Ork 
                     Siła += 5;
                     zdrowie -= 10;
+                    klasa = "Ork";
                     break;
                 case 6://Człowiek 
-                    Zwinność += 1;
+                    Zwinność += 1; 
+                    klasa = "Człowiek";
                     break;
                 case 7://Gnom 
                     Wiedza += 5;
                     mana -= 10;
+                    klasa = "Gnome";
                     break;
                 case 8://Halfling 
                     Zręczność += 5;
                     mana -= 10;
+                    klasa = "Halfling";
                     break;
                 case 9://Kotmorf 
                     Elastyczność += 5;
                     zdrowie -= 20;
+                    klasa = "Kotmorf";
                     break;
                 case 10://Goblin 
                     pancerz -= 10;
                     mana -= 10;
+                    klasa = "Goblin";
                     break;
                 case 11://Faun 
                     poetyckosc += 5;
                     pancerz += 10;
+                    klasa = "Faun";
                     break;
                 case 12://Minotaur 
                     Siła += 5;
                     mana -= 10;
+                    klasa = "Minotaur";
                     break;
                 case 13://Lizardfolk 
                     Wytrzymałość += 5;
                     mana -= 10;
+                    klasa = "LizordFolk";
                     break;
                 case 14://Tiefling 
                     Wiedza += 5;
                     pancerz -= 10;
+                    klasa = "Tiefling";
                     break;
                 case 15://Aarakocra 
                     Zwinność += 5;
                     pancerz -= 10;
+                    klasa = "Aarakocra";
                     break;
                 case 16://Kenku 
                     SztukaWalkiBroniaBiala += 5;
                     pancerz -= 10;
+                    klasa = "Kenku";
                     break;
                 case 17://oni
                     Siła += 5;
                     zdrowie -= 10;
+                    klasa = "Oni";
                     break;
                 case 18://Firbolg 
                     Wiedza += 5;
                     pancerz -= 10;
+                    klasa = "Firbolg";
                     break;
                 case 19://Yuan-ti 
                     Wiedza += 5;
                     SztukaPrzeklęta += 1;
                     pancerz -= 10;
+                    klasa = "Yuan-ti";
                     break;
                 case 20://Gith 
                     Wiedza += 5;
                     Telepatia += 1;
                     zdrowie -= 10;
+                    klasa = "Gith";
                     break;
                 case 21://Kobold 
                     Zwinność += 2;
-                    RozbrajaniePulapek += 1;
+                    RozbrajaniePulapek += 4;
+                    klasa = "Kobold";
                     break;
                 case 22://Warforged 
                     pancerz += 20;
                     Wytrzymałość += 2;
                     Siła -= 1;
+                    klasa = "WarForged";
                     break;
                 case 23://Genasi 
                     Zręczność += 3;
                     zdrowie -= 10;
+                    klasa = "Genasi";
                     break;
                 case 24://Shifter 
                     Siła += 4;
                     ZmienianieKształtu += 1;
                     pancerz -= 20;
+                    klasa = "Shifter";
                     break;
                 case 25://Goliath 
                     Wytrzymałość += 4;
                     SiłaWoli += 1;
                     mana -= 20;
+                    klasa = "Goliad";
                     break;
                 case 26://Drow 
                     Zwinność += 4;
                     Ukrywanie += 1;
                     zdrowie -= 10;
+                    klasa = "Drow";
                     break;
                 case 27://Aasimar 
                     MagiaŚwiatła += 2;
                     Wiedza += 3;
                     mana -= 20;
+                    klasa = "Aasimar";
                     break;
                 case 28://Tortle 
                     Wytrzymałość += 2;
                     pancerz += 10;
                     mana -= 20;
+                    klasa = "Tortle";
                     break;
                 case 29://Svirfnrbil 
                     Wiedza += 3;
                     Ziołolecznictwo += 2;
                     pancerz -= 20;
+                    klasa = "Svirfnrbil";
                     break;
                 case 30://Sylph 
                     Zwinność += 4;
                     Niewidzialność += 1;
                     zdrowie -= 10;
+                    klasa = "Sylph";
                     break;
                 case 31://Satyr 
                     poetyckosc += 3;
                     WyczuciePoezji += 1;
+                    klasa = "Satyr";
                     break;
                 case 32://Firran 
                     Zwinność += 4;
+                    klasa = "Firran";
                     break;
                 case 33://Svirfneblin 
                     Zręczność += 2;
                     Instynkt += 1;
+                    klasa = "Svirfneblin";
                     break;
                 case 34://Changeling 
                     Zręczność += 2;
                     Ukrywanie += 3;
                     pancerz -= 2;
+                    klasa = "ChangeLing";
                     break;
                 case 35://Triton 
                     pancerz -= 20;
                     WytrzymaloscPsychiczna = 5;
+                    klasa = "Trition";
                     break;
                 case 36://Tabaxi 
                     Zwinność += 2;
                     Rzemiosło += 3;
                     pancerz -= 10;
+                    klasa = "Tabaxi";
                     break;
                 case 37://Centaur 
                     Siła += 3;
                     Wytrzymałość += 1;
                     break;
+                    klasa = "Centaur";
                 case 38://Tengu 
                     HeroicznyNatarcie += 1;
+                    klasa = "Tengu";
                     break;
                 case 39://Warlock 
                     Wytrzymałość += 2;
                     PogłębioneZrozumienieMagii += 2;
                     zdrowie -= 10;
+                    klasa = "Warlock";
                     break;
                 case 40://Dhampir 
                     MagiaCiemności += 3;
                     Wiedza += 2;
                     mana -= 10;
+                    klasa = "Dhampir";
                     break;
                 default:
                     Console.WriteLine("Nieprawidłowy wybór. Spróbuj ponownie.");
@@ -1281,66 +1322,68 @@ Telepatia = 0, SztukaWalkiBroniaBiala = 0, yingYang = 0, poetyckosc = 0;
                     Console.ReadLine();
             }
             #endregion
+
+
+
             //271
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine($"┌──────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-                Console.WriteLine($"│█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
-                Console.WriteLine($"│█     CLASSA:{className,-10}                                                                                                                                                                                                                                              ");
-                Console.WriteLine($"│█     PODSTAWOWE INFORMACJE:                                                                                                                                                                                                                                              ");
-                Console.WriteLine($"│█     ZDROWIE:{zdrowie,-3}                                                                                                                                                                                                                                                ");
-                Console.WriteLine($"│█     MANA:{mana,-3}                                                                                                                                                                                                                                                      ");
-                Console.WriteLine($"│█     PANCERZ:{pancerz,-3}                                                                                                                                                                                                                                                ");
-                Console.WriteLine($"│█     SIŁA:{Siła,-3}                                                                                                                                                                                                                                                      ");
-                Console.WriteLine($"│█     ZRĘCZMOŚĆ: {Zręczność, -3}                                                                                                                                                                                                                                          ");
-                Console.WriteLine($"│█     CHARYZMA: {Charyzma,-3}                                                                                                                                                                                                                                             ");
-                Console.WriteLine($"│█                                                                                                                                                                                                                                                                         ");
-                Console.WriteLine($"│█                                                                                                                                                                                                                                                                         ");
-                Console.WriteLine($"│█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████");
-                Console.WriteLine($"├──────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
-                Console.WriteLine($"│     CO CHCESZ ZROBIĆ?                                                    │  STATYSTYKI:                                                                                                                                                                                  ");
-                Console.WriteLine($"│                                                                          │       Sztuka przeklęta: {SztukaPrzeklęta,-3}\tErecyzja: {Precyzja,-3}\tPrzetrwanie w warunkach ekstremalnych: {PrzetrwanieWWarunkachEkstremalnych,-3}            ");
-                Console.WriteLine($"│      1 - SPRAWDZ MAPE                                                    │       Wiedza: {Wiedza,-3}\tManipulacja charyzmą: {ManipulacjaCharyzmą,-3}\tPraca nad ciałem: {PracaNadCiałem,-3}                               ");
-                Console.WriteLine($"│                                                                          │       Wytrzymałość: {Wytrzymałość,-3}\tWizja mistyczna: {WizjaMistyczna,-3}\tHeroiczny natarcie: {HeroicznyNatarcie,-3}                          ");
-                Console.WriteLine($"│      2 - WYLEJ POT I KREW W WALCE                                        │       Szczęście: {Szczęście,-3}\tPrzyciemnienie mentalne: {PrzyciemnienieMentalne,-3}\tMagia światła: {MagiaŚwiatła,-3}                                    ");
-                Console.WriteLine($"│                                                                          │       Skrytobójstwo: {Skrytobójstwo,-3}\tFałszerstwo: {Fałszerstwo,-3}\tMagia ciemności: {MagiaCiemności,-3}                                ");
-                Console.WriteLine($"│      3- EKSPORUJ                                                         │       Odporność magiczna: {OdpornośćMagiczna,-3}\tRzucanie czarów: {RzucanieCzarów,-3}\tMagia ognia: {MagiaOgnia,-3}                                        ");
-                Console.WriteLine($"│                                                                          │       Rzemiosło: {Rzemiosło,-3}\tWarzenie eliksirów: {WarzenieEliksirów,-3}\tMagia wiatru: {MagiaWiatru,-3}                                      ");
-                Console.WriteLine($"│                                                                          │       Ujezdzanie konia: {BieganieKonia,-3}\tManipulacja energią: {ManipulacjaEnergią,-3}\tWykorzystanie środowiska: {WykorzystanieSrodowiska,-3}              ");
-                Console.WriteLine($"│                                                                          │       Elastyczność: {Elastyczność,-3}\tManipulacja czasem: {ManipulacjaCzasem,-3}\tMagia ziemi: {MagiaZiemi,-3}                                        ");
-                Console.WriteLine($"│                                                                          │       Instynkt: {Instynkt,-3}\tWięź ze duchami natury: {WięźZeSpirytamiNatury,-3}\tMagia powietrza: {MagiaPowietrza,-3}                                ");
-                Console.WriteLine($"│                                                                          │       Charyzma bojowa: {CharyzmaBojowa,-3}\tMistrzostwo iluzji: {MistrzostwoIluzji,-3}\tMagia pustki: {MagiaPustki,-3}                                      ");
-                Console.WriteLine($"│                                                                          │       Koncentracja: {Koncentracja,-3}\t Magia krwi: {MagiaKrwi,-3}\tStrażnik: {Strażnik,-3}                                             ");
-                Console.WriteLine($"│                                                                          │       Umiejętności przetrwania: {UmiejętnościPrzetrwania,-3}\tRozerwanie dusz: {RozerwanieDusz,-3}\tSztuka walki bronią białą: {SztukaWalkiBroniaBiala,-3}              ");
-                Console.WriteLine($"│                                                                          │       Ukrywanie: {Ukrywanie,3}\tPenetracja: {Penetracja,-3}\tAbsorpcja energii: {AbsorpcjaEnergii,-3}                            ");
-                Console.WriteLine($"│                                                                          │       Śledzenie: {Śledzenie,3}\tCzytanie aury: {CzytanieAury,-3}\tOdczytywanie emocji: {OdczytywanieEmocji,-3}                        ");
-                Console.WriteLine($"│                                                                          │       Intuicja: {Intuicja,3}\tTworzenie portali: {TworzeniePortali,-3}\tWydobycie wglądu: {WydobycieWglądu,-3}                              ");
-                Console.WriteLine($"│                                                                          │       Siła woli: {SiłaWoli,3}\t Magiczne tarcze: {MagiczneTarcze,-3}\tMagia lodu: {MagiaLodu,-3}                                          ");
-                Console.WriteLine($"│                                                                          │       Charyzma lidera: {CharyzmaLidera,3}\tModyfikacja rzeczywistości: {ModyfikacjaRzeczywistości,-3}\tNiewidzialność: {Niewidzialność,-3}                                 ");
-                Console.WriteLine($"│                                                                          │       Zrozumienie intuicji: {ZrozumienieIntuicji,3}\tPrzełamywanie granicy: {PrzełamywanieGranicy,-3}\tMagia chaotyczna: {MagiaChaotyczna,-3}                              ");
-                Console.WriteLine($"│                                                                          │       Elastyczność mentalna: {ElastycznośćMentalna,3}\tManipulacja energią życiową:{ManipulacjaEnergiąŻyciową,-3}Przewidywanie zagrożeń: {PrzewidywanieZagrożeń,-3}                  ");
-                Console.WriteLine($"│                                                                          │       Medytacja: {Medytacja,-3}\tManipulacja przestrzenią: {ManipulacjaPrzestrzenią,-3}\tMagia eteru: {MagiaEteru,-3}                                        ");
-                Console.WriteLine($"│                                                                          │       Negocjacje: {Negocjacje,-3}\tZiołolecznictwo: {Ziołolecznictwo,-3}\tPerswazja: {Perswazja,-3}                                           ");
-                Console.WriteLine($"│                                                                          │       Intuicja walki: {IntuicjaWalki}\tUnikanie: {Unikanie,-3}\tTropienie: {Tropienie,-3}                                           ");
-                Console.WriteLine($"│       0 - wyjdz                                                          │       Charyzma zwierząt: {CharyzmaZwierząt,-3}\tMaskowanie magii: {MaskowanieMagii,-3}\tMediacja: {Mediacja,-3}                                             ");
-                Console.WriteLine($"│                                                                          │       Nekromancja: {Nekromancja,-3}\tWywoływanie klątw: {WywoływanieKlątw,-3}\tWiedza medyczna: {WiedzaMedyczna,-3}                                ");
-                Console.WriteLine($"│                                                                          │       Wrodzona wiedza: {WrodzonaWiedza,-3}\tTelepatia: {Telepatia,-3}\tYing Yang: {yingYang,-3}                                            ");
-                Console.WriteLine($"│                                                                          │       Zdolność maskowania: {ZdolnośćMaskowania,-3}\tUdzielanie mocy: {UdzielanieMocy,-3}\tTargowanie się: {TargowanieSie,-3}                                  ");
-                Console.WriteLine($"│                                                                          │       Wyostrzone zmysły: {WyostrzoneZmysły,-3}\tDowodzenie armiami: {DowodzenieArmiami,-3}\tTaktyka: {Taktyka,-3}                                               ");
-                Console.WriteLine($"│                                                                          │       Czujność: {Czujność,-3}\tMędrzec: {Mędrzec,-3}\tPlotkowanie: {Plotkowanie,-3}                                       ");
-                Console.WriteLine($"│                                                                          │       Samodoskonalenie: {Samodoskonalenie,-3}\tKontrola grawitacji: {KontrolaGrawitacji,-3}\tDedukcja: {Dedukcja,-3}                                             ");
-                Console.WriteLine($"│                                                                          │       Akrobatyka: {Akrobatyka,-3}\tArcheologia: {Archeologia,-3}\tWytrzymałość psychiczna: {WytrzymaloscPsychiczna}                   ");
-                Console.WriteLine($"│                                                                          │       Wyczucie poezji: {WyczuciePoezji,-3}\tInterpretacja znaków: {InterpretacjaZnaków,-3}\tSpecjalizacja elementalistyczna: {SpecjalizacjaElementalistyczna}   ");
-                Console.WriteLine($"│                                                                          │       Myślenie analityczne: {MyślenieAnalityczne,-3}Improwizacja: {Improwizacja,-3}\t Fizyka: {Fizyka}                                                    ");
-                Console.WriteLine($"│                                                                          │       Tworzenie pól energetycznych:{TworzeniePólEnergetycznych,-3}Bieg: {Bieg,-3}\tSprint: {Sprint,-3}                                                 ");
-                Console.WriteLine($"│                                                                          │       Kopnięcie: {Kopnięcie,-3}\tTelekineza: {Telekineza,-3}\tKryptografia: {Kryptografia,-3}                                     ");
-                Console.WriteLine($"│                                                                          │       Refleks: {Refleks,-3}\tZmienianie kształtu: {ZmienianieKształtu,-3}\tRozbrajanie pułapek: {RozbrajaniePulapek,-3}                        ");
-                Console.WriteLine($"│                                                                          │       Intuicja technologiczna: {IntuicjaTechnologiczna,-3}\tOswojenie zwierząt: {OswojenieZwierząt,-3}\tZwinność: {Zwinność,-3}                                             ");
-                Console.WriteLine($"│                                                                          │       Przemierzanie terenu: {PrzemierzanieTerenu,-3}\t Magia słowa: {MagiaSłowa,-3}\tPogłębione zrozumienie magii: {PogłębioneZrozumienieMagii,-3}       ");
-                Console.WriteLine($"│                                                                          │       Manipulacja emocjonalna: {ManipulacjaEmocjonalna,-3}\tAntygrawitacja: {Antygrawitacja,-3}\tZnajomość języków obcych: {ZnajomośćJezykowObcych,-3}               ");
-                Console.WriteLine($"│                                                                          │                                                                                                                                                                                               ");
-                Console.WriteLine($"└──────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   ────");
+
+                Console.Clear();         
+                Console.WriteLine($"┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐   ");
+                Console.WriteLine($"│███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████   ");
+                Console.WriteLine($"│█     CLASSA:{className,-10}                             ");
+                Console.WriteLine($"│█     PODSTAWOWE INFORMACJE:                           ");
+                Console.WriteLine($"│█     ZDROWIE:{zdrowie,-3}                            ");
+                Console.WriteLine($"│█     MANA:{mana,-3}                                  ");
+                Console.WriteLine($"│█     PANCERZ:{pancerz,-3}                            ");
+                Console.WriteLine($"│█     SIŁA:{Siła,-3}                                   ");
+                Console.WriteLine($"│█     ZRĘCZMOŚĆ: {Zręczność, -3}                       ");
+                Console.WriteLine($"│█     Rasa: {klasa,-3}                         ");
+                Console.WriteLine($"├─────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤ ");
+                Console.WriteLine($"│     CO CHCESZ ZROBIĆ?                           │ STATYSTYKI:  ");
+                Console.WriteLine($"│                                                 │ Sztuka przeklęta: {SztukaPrzeklęta,-3}    Erecyzja: {Precyzja,-3}                   Przetrwanie w warunkach ekstremalnych: {PrzetrwanieWWarunkachEkstremalnych,-3} ");
+                Console.WriteLine($"│      1 - SPRAWDZ MAPE                           │ Wiedza: {Wiedza,-3}              Manipulacja charyzmą: {ManipulacjaCharyzmą,-3}       Praca nad ciałem: {PracaNadCiałem,-3}                 ");
+                Console.WriteLine($"│                                                 │ Wytrzymałość: {Wytrzymałość,-3}        Wizja mistyczna: {WizjaMistyczna,-3}            Heroiczny natarcie: {HeroicznyNatarcie,-3}            ");
+                Console.WriteLine($"│      2 - WYLEJ POT I KREW W WALCE               │ Szczęście: {Szczęście,-3}           Przyciemnienie mentalne: {PrzyciemnienieMentalne,-3 }    Magia światła: {MagiaŚwiatła,-3}    ");
+                Console.WriteLine($"│                                                 │ Skrytobójstwo: {Skrytobójstwo,-3}       Fałszerstwo: {Fałszerstwo,-3}                Magia ciemności: {MagiaCiemności,-3}                  ");
+                Console.WriteLine($"│      3 - EKSPORUJ                               │ Rzucanie czarów: {RzucanieCzarów,-3}     Magia ognia: {MagiaOgnia,-3}                Magia wiatru: {MagiaWiatru,-3}                        ");
+                Console.WriteLine($"│                                                 │ Rzemiosło: {Rzemiosło,-3}           Warzenie eliksirów: {WarzenieEliksirów,-3}         Wykorzystanie środowiska: {WykorzystanieSrodowiska,-3}");
+                Console.WriteLine($"│                                                 │ Ujezdzanie konia: {BieganieKonia,-3}    Manipulacja energią: {ManipulacjaEnergią,-3}        Magia ziemi: {MagiaZiemi,-3}                          ");
+                Console.WriteLine($"│                                                 │ Elastyczność: {Elastyczność,-3}        Manipulacja czasem: {ManipulacjaCzasem,-3}         Magia powietrza: {MagiaPowietrza,-3}                  ");
+                Console.WriteLine($"│                                                 │ Instynkt: {Instynkt,-3}            Więź ze duchami natury: {WięźZeSpirytamiNatury,-3}     Magia pustki: {MagiaPustki,-3}                        ");
+                Console.WriteLine($"│                                                 │ Charyzma bojowa: {CharyzmaBojowa,-3}     Mistrzostwo iluzji: {MistrzostwoIluzji,-3}         Strażnik: {Strażnik,-3}                               ");
+                Console.WriteLine($"│                                                 │ Koncentracja: {Koncentracja,-3}        Magia krwi: {MagiaKrwi,-3}                 Absorpcja energii: {AbsorpcjaEnergii,-3}              ");
+                Console.WriteLine($"│                                                 │ Rozerwanie dusz: {RozerwanieDusz,-3}     Sztuka walki bronią białą:{SztukaWalkiBroniaBiala,-3}   Odczytywanie emocji: {OdczytywanieEmocji,-3}          ");
+                Console.WriteLine($"│                                                 │ Ukrywanie: {Ukrywanie,3}           Penetracja: {Penetracja,-3}                 Wydobycie wglądu: {WydobycieWglądu,-3}                ");
+                Console.WriteLine($"│                                                 │ Śledzenie: {Śledzenie,3}           Czytanie aury: {CzytanieAury,-3}              Magia lodu: {MagiaLodu,-3}                            ");
+                Console.WriteLine($"│                                                 │ Intuicja: {Intuicja,3}            Tworzenie portali: {TworzeniePortali,-3}          Niewidzialność: {Niewidzialność,-3}                   ");
+                Console.WriteLine($"│                                                 │ Siła woli: {SiłaWoli,3}           Magiczne tarcze: {MagiczneTarcze,-3}            Manipulacja przestrzenią: {ManipulacjaPrzestrzenią,-3}");
+                Console.WriteLine($"│                                                 │ Charyzma lidera: {CharyzmaLidera,3}     Modyfikacja rzeczywistości: {ModyfikacjaRzeczywistości,-3}                                                 ");
+                Console.WriteLine($"│                                                 │ Magia chaotyczna: {MagiaChaotyczna,-3}    Manipulacja energią życiową:{ManipulacjaEnergiąŻyciową,-3}                                                 ");
+                Console.WriteLine($"│                                                 │ Medytacja: {Medytacja,-3}           Magia eteru: {MagiaEteru,-3}                Charyzma zwierząt: {CharyzmaZwierząt,-3}              ");
+                Console.WriteLine($"│                                                 │ Ziołolecznictwo: {Ziołolecznictwo,-3}     Perswazja: {Perswazja,-3}                  Przewidywanie zagrożeń: {PrzewidywanieZagrożeń,-3}    ");
+                Console.WriteLine($"│                                                 │ Negocjacje: {Negocjacje,-3}          Unikanie: {Unikanie,-3}                   Zdolność maskowania: {ZdolnośćMaskowania,-3}          ");
+                Console.WriteLine($"│                                                 │ Intuicja walki: {IntuicjaWalki}        Tropienie: {Tropienie,-3}                  Wiedza medyczna: {WiedzaMedyczna,-3}                  ");
+                Console.WriteLine($"│       0 - wyjdz                                 │ Maskowanie magii: {MaskowanieMagii,-3}    Mediacja: {Mediacja,-3}                   Ying Yang: {yingYang,-3}                              ");
+                Console.WriteLine($"│                                                 │ Nekromancja: {Nekromancja,-3}         Wywoływanie klątw: {WywoływanieKlątw,-3}          Wyostrzone zmysły: {WyostrzoneZmysły,-3}              ");
+                Console.WriteLine($"│                                                 │ Wrodzona wiedza: {WrodzonaWiedza,-3}     Telepatia: {Telepatia,-3}                  Wytrzymałość psychiczna: {WytrzymaloscPsychiczna}     ");
+                Console.WriteLine($"│                                                 │ Udzielanie mocy: {UdzielanieMocy,-3}     Targowanie się: {TargowanieSie,-3}             Specjalizacja elementalistyczna: {SpecjalizacjaElementalistyczna} ");
+                Console.WriteLine($"│                                                 │ Taktyka: {Taktyka,-3}             Dowodzenie armiami: {DowodzenieArmiami,-3}         Myślenie analityczne: {MyślenieAnalityczne,-3}        ");
+                Console.WriteLine($"│                                                 │ Czujność: {Czujność,-3}            Mędrzec: {Mędrzec,-3}                    Plotkowanie: {Plotkowanie,-3}                         ");
+                Console.WriteLine($"│                                                 │ Samodoskonalenie: {Samodoskonalenie,-3}    Kontrola grawitacji: {KontrolaGrawitacji,-3}        Tworzenie pól energetycznych:{TworzeniePólEnergetycznych,-3}");
+                Console.WriteLine($"│                                                 │ Akrobatyka: {Akrobatyka,-3}          Archeologia: {Archeologia,-3}                Zrozumienie intuicji: {ZrozumienieIntuicji,3}         ");
+                Console.WriteLine($"│                                                 │ Wyczucie poezji: {WyczuciePoezji,-3}     Interpretacja znaków: {InterpretacjaZnaków,-3}       Rozbrajanie pułapek: {RozbrajaniePulapek,-3}          ");
+                Console.WriteLine($"│                                                 │ Improwizacja: {Improwizacja,-3}        Fizyka: {Fizyka}                       Intuicja technologiczna: {IntuicjaTechnologiczna,-3}  ");
+                Console.WriteLine($"│                                                 │ Bieg: {Bieg,-3}                Sprint: {Sprint,-3}                     Przemierzanie terenu: {PrzemierzanieTerenu,-3}        ");
+                Console.WriteLine($"│                                                 │ Kopnięcie: {Kopnięcie,-3}           Telekineza: {Telekineza,-3}                 Manipulacja emocjonalna: {ManipulacjaEmocjonalna,-3}  ");
+                Console.WriteLine($"│                                                 │ Refleks: {Refleks,-3}             Zmienianie kształtu: {ZmienianieKształtu,-3}        Odporność magiczna:{OdpornośćMagiczna,-3}             ");
+                Console.WriteLine($"│                                                 │ Zwinność: {Zwinność,-3}            Oswojenie zwierząt: {OswojenieZwierząt,-3}         Przełamywanie granicy: {PrzełamywanieGranicy,-3}      ");
+                Console.WriteLine($"│                                                 │ Magia słowa: {MagiaSłowa,-3}         Pogłębione zrozumienie magii: {PogłębioneZrozumienieMagii,-3}          ");
+                Console.WriteLine($"│                                                 │ Antygrawitacja: {Antygrawitacja,-3}      Znajomość języków obcych: {ZnajomośćJezykowObcych,-3}                  ");
+                Console.WriteLine($"│                                                 │ Kryptografia: {Kryptografia,-3}        Elastyczność mentalna: {ElastycznośćMentalna,3}                        ");
+                Console.WriteLine($"│                                                 │ Dedukcja: {Dedukcja,-3}            Umiejętności przetrwania: {UmiejętnościPrzetrwania,-3}                 ");
+                Console.WriteLine($"└─────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────");
 
                 string input = Console.ReadLine();
                 switch (input)
