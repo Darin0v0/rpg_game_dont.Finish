@@ -18,9 +18,7 @@ namespace MyApp
 
        public static void Main(string[] args)
         {
-
             Console.OutputEncoding = Encoding.UTF8;
-
             #region//początek gry
             Console.WriteLine($"   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
             Console.WriteLine($"   │                                                                                WIAJ W GRZE RPG                                                                                            │");
@@ -43,8 +41,6 @@ namespace MyApp
             Console.Write(">> ");
             int inputClass = int.Parse(Console.ReadLine());
             #region//klasy
-
-
             string className = "";
             int zdrowie = 0, mana = 0, pancerz = 0, Siła = 0, Zręczność = 0, Wiedza = 0, Wytrzymałość = 0, Charyzma = 0, Skrytobójstwo = 0, OdpornośćMagiczna = 0, Rzemiosło = 0, BieganieKonia = 0, Elastyczność = 0,
             Instynkt = 0, CharyzmaBojowa = 0, Koncentracja = 0, UmiejętnościPrzetrwania = 0, Ukrywanie = 0, Śledzenie = 0, Intuicja = 0, SiłaWoli = 0, CharyzmaLidera = 0,
@@ -62,8 +58,6 @@ namespace MyApp
             Mediacja = 0, WiedzaMedyczna = 0, TargowanieSie = 0, Taktyka = 0, Plotkowanie = 0, Dedukcja = 0, WytrzymaloscPsychiczna = 0, SpecjalizacjaElementalistyczna = 0,
             Fizyka = 0, Kryptografia = 0, RozbrajaniePulapek = 0, Zwinność = 0, PogłębioneZrozumienieMagii = 0, ZnajomośćJezykowObcych = 0, WykorzystanieSrodowiska = 0,
             Telepatia = 0, SztukaWalkiBroniaBiala = 0, yingYang = 0, poetyckosc = 0;
-
-
             switch (inputClass)
             {
                 case 1: // mag
